@@ -1,0 +1,14 @@
+{
+  "name": "tradelancing",
+  "version": "1.0.0",
+  "description": "A freelancing platform for tradespeople.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cristian Roblero",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
