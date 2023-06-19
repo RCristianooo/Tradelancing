@@ -23,7 +23,9 @@ module.exports = function (passport) {
             if (isMatch) {
               return done(null, user);
             }
-            return done(null, false, { msg: "Invalid email or password." });
+            // does not work for now, may needed to return to fix
+            // return done(null, false, { msg: "Invalid email or password." });
+            return done("Invalid email or password. Please go back and try again.", false, { msg: "." });
           });
         })
         .catch((err) => {

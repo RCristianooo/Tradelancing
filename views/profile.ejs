@@ -1,51 +1,204 @@
 <%- include('partials/logged-header') -%>
 <div class="container card-container">
   <div class="row justify-content-center">
-      <div class="col-6">
-          <!-- <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <!-- <a href="/logout" class="col-3 btn btn-primary">Logout</a> -->
-          <!-- </div> --> 
-          <div class="mt-5">
-            <h2>Add a Job</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="title" class="form-label">Job Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div>
-              <div class="mb-3">
-              <label for="country" class="form-label">What Pro are you searching for</label>
-              <select class="form-select" aria-label="Default select example" id="country" name="country">
-                <option selected>Select Pro</option>
-              </select>
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Description</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-            </form>
+    <div class="col-6">
+      <div class="mt-5">
+        <h2>Add a Job</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+            <label for="title" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="title" name="title">
           </div>
+          <div class="mb-3">
+            <label for="profession" class="form-label">What professional are you searching for</label>
+            <select class="form-select" aria-label="Default select example" id="profession" name="profession">
+                <option selected>Select Profession</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Animator">Animator</option>
+                <option value="Aircraft Mechanic">Aircraft Mechanic</option>
+                <option value="App Developer">App Developer</option>
+                <option value="Architect">Architect</option>
+                <option value="Auto Body Technician">Auto Body Technician</option>
+                <option value="Auto Mechanic">Auto Mechanic</option>
+                <option value="Bicycle Mechanic">Bicycle Mechanic</option>
+                <option value="Bicycle Repair Technician">Bicycle Repair Technician</option>
+                <option value="Blacksmith">Blacksmith</option>
+                <option value="Boilermaker">Boilermaker</option>
+                <option value="Bookbinder">Bookbinder</option>
+                <option value="Bricklayer">Bricklayer</option>
+                <option value="Cabinet Maker">Cabinet Maker</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Concrete Finisher">Concrete Finisher</option>
+                <option value="Concrete Pump Operator">Concrete Pump Operator</option>
+                <option value="Construction Manager">Construction Manager</option>
+                <option value="Construction Worker">Construction Worker</option>
+                <option value="Content Creator">Content Creator</option>
+                <option value="Copywriter">Copywriter</option>
+                <option value="Cutler">Cutler (Knife Maker)</option>
+                <option value="Data Entry Specialist">Data Entry Specialist</option>
+                <option value="Digital Marketer">Digital Marketer</option>
+                <option value="Drafter">Drafter</option>
+                <option value="Drywaller">Drywaller</option>
+                <option value="E-commerce Specialist">E-commerce Specialist</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Elevator Mechanic">Elevator Mechanic</option>
+                <option value="Event Planner">Event Planner</option>
+                <option value="Farrier">Farrier</option>
+                <option value="Fashion Designer">Fashion Designer</option>
+                <option value="Financial Advisor">Financial Advisor</option>
+                <option value="Freelance Writer">Freelance Writer</option>
+                <option value="Framer">Framer (Framing Carpenter)</option>
+                <option value="Furniture Finisher">Furniture Finisher</option>
+                <option value="Glazier">Glazier</option>
+                <option value="Graphic Designer">Graphic Designer</option>
+                <option value="Grant Writer">Grant Writer</option>
+                <option value="Gunsmith">Gunsmith</option>
+                <option value="Handyman">Handyman</option>
+                <option value="Home Inspector">Home Inspector</option>
+                <option value="Housecleaner">Housecleaner</option>
+                <option value="HVAC Technician">HVAC Technician</option>
+                <option value="Illustrator">Illustrator</option>
+                <option value="Interior Designer">Interior Designer</option>
+                <option value="Ironworker">Ironworker</option>
+                <option value="Ironworker Structural">Ironworker (Structural)</option>
+                <option value="Landscape Designer">Landscape Designer</option>
+                <option value="Landscaper">Landscaper</option>
+                <option value="Leatherworker">Leatherworker</option>
+                <option value="Legal Consultant">Legal Consultant</option>
+                <option value="Life Coach">Life Coach</option>
+                <option value="Locksmith">Locksmith</option>
+                <option value="Luthier">Luthier (Stringed Instrument Maker)</option>
+                <option value="Machinery Operator">Machinery Operator</option>
+                <option value="Makeup Artist">Makeup Artist</option>
+                <option value="Mason">Mason</option>
+                <option value="Masonry Contractor">Masonry Contractor</option>
+                <option value="Marketing Consultant">Marketing Consultant</option>
+                <option value="Metal Polisher">Metal Polisher</option>
+                <option value="Millwright">Millwright</option>
+                <option value="Paving Contractor">Paving Contractor</option>
+                <option value="Painter">Painter</option>
+                <option value="Personal Trainer">Personal Trainer</option>
+                <option value="Photographer">Photographer</option>
+                <option value="Plasterer">Plasterer</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Power Lineman">Power Lineman</option>
+                <option value="Paving Contractor">Paving Contractor</option>
+                <option value="Project Manager">Project Manager</option>
+                <option value="Roofing Contractor">Roofing Contractor</option>
+                <option value="Scaffolder">Scaffolder</option>
+                <option value="SEO Specialist">SEO Specialist</option>
+                <option value="Sheet Metal Worker">Sheet Metal Worker</option>
+                <option value="Silversmith">Silversmith</option>
+                <option value="Sign Maker">Sign Maker</option>
+                <option value="Social Media Influencer">Social Media Influencer</option>
+                <option value="Social Media Manager">Social Media Manager</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Stonemason">Stonemason</option>
+                <option value="Surveyor">Surveyor</option>
+                <option value="Tiler">Tiler</option>
+                <option value="Tile Setter">Tile Setter</option>
+                <option value="Transcriptionist">Transcriptionist</option>
+                <option value="Translator">Translator</option>
+                <option value="Upholsterer">Upholsterer</option>
+                <option value="UX Designer">UX Designer</option>
+                <option value="Video Editor">Video Editor</option>
+                <option value="Videographer">Videographer</option>
+                <option value="Virtual Assistant">Virtual Assistant</option>
+                <option value="Voice Actor">Voice Actor</option>
+                <option value="Watchmaker">Watchmaker</option>
+                <option value="Web Developer">Web Developer</option>
+                <option value="Welder">Welder</option>
+                <option value="Welding Inspector">Welding Inspector</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="description" class="form-label">Job Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="location" class="form-label">Job Location</label>
+            <input type="text" class="form-control" id="location" name="location">
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="number" class="form-control" id="price" name="price" placeholder="0.00" step="10">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="paymentOption" class="form-label">Payment Options</label>
+            <select class="form-select" id="payment" name="payment">
+                <option selected>Select Payment Option</option>
+                <option value="Apple Pay">Apple Pay</option>
+                <option value="Google Pay">Google Pay</option>
+                <option value="Cash">Cash</option>
+                <option value="Cash App">Cash App</option>
+                <option value="Check">Check</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Venmo">Venmo</option>
+                <option value="Zelle">Zelle</option>
+            </select>
+          </div>        
+          <!-- <div class="mb-3"> -->
+            <!-- <label for="paymentOption" class="form-label">Payment Options</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionApplePay" name="paymentOption[]" value="Apple Pay">
+                <label class="form-check-label" for="paymentOptionApplePay">
+                    Apple Pay
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionGooglePay" name="paymentOption[]" value="Google Pay">
+                <label class="form-check-label" for="paymentOptionGooglePay">
+                    Google Pay
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionCash" name="paymentOption[]" value="Cash">
+                <label class="form-check-label" for="paymentOptionCash">
+                    Cash
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionCashApp" name="paymentOption[]" value="Cash App">
+                <label class="form-check-label" for="paymentOptionCashApp">
+                    Cash App
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionCheck" name="paymentOption[]" value="Check">
+                <label class="form-check-label" for="paymentOptionCheck">
+                    Check
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionPayPal" name="paymentOption[]" value="PayPal">
+                <label class="form-check-label" for="paymentOptionPayPal">
+                    PayPal
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionVenmo" name="paymentOption[]" value="Venmo">
+                <label class="form-check-label" for="paymentOptionVenmo">
+                    Venmo
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="paymentOptionZelle" name="paymentOption[]" value="Zelle">
+                <label class="form-check-label" for="paymentOptionZelle">
+                    Zelle
+                </label>
+            </div>
+          </div> -->
+          <div class="mb-3">
+            <label for="imageUpload" class="form-label">Upload an Image</label>
+            <input type="file" class="form-control" id="imageUpload" name="file">
+          </div>        
+          <button type="submit" class="btn btn-primary">Submit Job</button>
+        </form>
       </div>
-      <!-- <div class="col-6">
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
-      </div>   -->
     </div>
   </div>
-<!-- <%- include('partials/footer') -%> -->
+</div>
+<%- include('partials/footer') -%>

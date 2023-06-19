@@ -11,6 +11,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getMyJobs: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id });
+      res.render("my-jobs.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getBookmarks: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
@@ -19,7 +27,7 @@ module.exports = {
       console.log(err);
     }
   },
-  getFeed: async (req, res) => {
+  getJobs: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
       var users = []
@@ -27,7 +35,7 @@ module.exports = {
         var user = await User.findById(posts[i].user)
         users.push(user.userName)
     }  
-      res.render('feed.ejs', {posts: posts, userName: users,user: req.user})
+      res.render('jobs.ejs', {posts: posts, userName: users,user: req.user})
     } catch (err) {
       console.log(err);
     }
@@ -56,8 +64,8 @@ module.exports = {
         payment: req.body.payment,
         user: req.user.id,
       });
-      console.log("Post has been added!");
-      res.redirect("/my-recipes");
+      console.log("Job has been added!");
+      res.redirect("/my-jobs");
     } catch (err) {
       console.log(err);
     }
