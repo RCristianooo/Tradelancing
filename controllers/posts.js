@@ -34,16 +34,29 @@ module.exports = {
       for(i in posts){
         var user = await User.findById(posts[i].user)
         users.push(user.userName)
-    }  
-      res.render('jobs.ejs', {posts: posts, userName: users,user: req.user})
+      }  
+      res.render('jobs.ejs', {posts: posts, userName: users, user: req.user})
     } catch (err) {
       console.log(err);
     }
   },
-  getPost: async (req, res) => {
+  getProfessionals: async (req, res) => {
+    try {
+      const posts = await Post.find().sort({ createdAt: "desc" }).lean();
+      var users = []
+      for (i in posts){
+        var user = await User.findById(posts[i].user)
+        users.push(user.userName)
+      }
+      res.render('professionals.ejs', {posts: posts, userName: users, user: req.user})
+    } catch (err) {
+      console.log(err)
+    }
+  },
+  getJob: async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      res.render("post.ejs", { post: post, user: req.user });
+      res.render("job.ejs", { post: post, user: req.user });
     } catch (err) {
       console.log(err);
     }
