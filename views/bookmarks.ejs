@@ -1,2 +1,25 @@
 <%- include('partials/logged-header') -%>
+
+<div class="container card-container">
+  <h1>My Bookmarked Jobs</h1>
+  <% console.log(posts[0]) %>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% for (var i = 0; i < posts.length; i++) {%>
+        <%if(posts[i].bookmarks.includes(user.id)) {%>
+    <div class="col">
+      <div class="card h-100">
+        <img src="<%= posts[i].image%>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= posts[i].title %></h5>
+          <p class="card-text">Price: $<%= posts[i].price %></p>
+          <p class="card-text">Location: <%= posts[i].location %></p>
+          <a href="/job/<%= posts[i]._id%>" class="btn btn-primary">View Job Posting</a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+</div>
+
 <%- include('partials/footer') -%>
