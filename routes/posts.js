@@ -9,7 +9,7 @@ router.get("/:id", ensureAuth, postsController.getJob);
 
 router.post("/createPost", upload.single("file"), postsController.createPost);
 
-router.put("/bookmarkPost/:id", postsController.bookmarkPost)
+router.put("/bookmarkJob/:id", postsController.bookmarkJob)
 
 router.delete("/deletePost/:id", postsController.deletePost);
 

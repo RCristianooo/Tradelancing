@@ -84,7 +84,7 @@ module.exports = {
     }
   },
 
-  bookmarkPost: async (req, res)=>{
+  bookmarkJob: async (req, res)=>{
     var bookmarked = false
     try{
       var post = await Post.findById({_id:req.params.id})
