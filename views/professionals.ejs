@@ -1,2 +1,28 @@
 <%- include('partials/logged-header') -%>
+
+<div class="container card-container">
+    <h1>Explore Available Professionals</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% for (var i = 0; i < pro.length; i++) {%>
+      <div class="col">
+        <div class="card h-100">
+          <img src="<%= pro[i].proImage%>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= pros[i].firstName %></h5>
+            <p class="card-text"><small class="text-muted"><%= profession[i]%></small></p>
+            <p class="card-text">Price: $<%= pros[i].rating %></p>
+            <p class="card-text">Location: <%= pros[i].location %></p>
+            <p class="card-text">Rates: <%= pros[i].rates %></p>
+            <a href="/job/<%= pros[i]._id%>" class="btn btn-outline-primary">View Professional</a>
+            <!-- Add other job-related information as needed -->
+            <!-- You can also display profile information if desired -->
+          </div>
+          <!-- You can customize the card's footer with additional information -->
+        </div>
+      </div>
+      <% } %>
+    </div>
+</div>
+  
+
 <%- include('partials/footer') -%>
