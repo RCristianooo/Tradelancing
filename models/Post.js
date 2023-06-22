@@ -23,7 +23,7 @@ const PostSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true
+        required: true,
     },
     bookmarks: {
         type: Array,
@@ -35,11 +35,11 @@ const PostSchema = new mongoose.Schema({
     },
     profession: {
         type: String,
-        required: true
+        required: true,
     },
     payment: {
         type: String,
-        required: true
+        required: true,
     },
     createdAt: {
         type: Date,
