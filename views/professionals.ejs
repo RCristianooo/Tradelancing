@@ -2,11 +2,11 @@
 
 <div class="container card-container">
     <h1>Explore Available Professionals</h1>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-5">
       <% for (var i = 0; i < pros.length; i++) {%>
       <div class="col">
         <div class="card h-100">
-          <img src="<%= pros[i].proImage%>" class="card-img-top" alt="...">
+          <img src="<%= pros[i].proImage%>" class="rounded-circle img-thumbnail" alt="...">
           <div class="card-body">
             <h5 class="card-title"><%= pros[i].firstName %></h5>
             <p class="card-text"><small class="text-muted"><%= pros[i].profession%></small></p>

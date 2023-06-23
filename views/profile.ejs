@@ -4,7 +4,7 @@
     <div class="col-7">
       <div class="mt-5">
         <h2>Add a Job</h2>
-        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+        <form action="/job/createPost" enctype="multipart/form-data" method="POST">
           <div class="mb-3">
             <label for="title" class="form-label">Job Title</label>
             <input type="text" class="form-control" id="title" name="title">
@@ -13,102 +13,26 @@
             <label for="profession" class="form-label">What professional are you searching for</label>
             <select class="form-select" aria-label="Default select example" id="profession" name="profession">
                 <option selected>Select Profession</option>
-                <option value="Accountant">Accountant</option>
-                <option value="Animator">Animator</option>
-                <option value="Aircraft Mechanic">Aircraft Mechanic</option>
-                <option value="App Developer">App Developer</option>
-                <option value="Architect">Architect</option>
-                <option value="Auto Body Technician">Auto Body Technician</option>
-                <option value="Auto Mechanic">Auto Mechanic</option>
-                <option value="Bicycle Mechanic">Bicycle Mechanic</option>
-                <option value="Bicycle Repair Technician">Bicycle Repair Technician</option>
-                <option value="Blacksmith">Blacksmith</option>
-                <option value="Boilermaker">Boilermaker</option>
-                <option value="Bookbinder">Bookbinder</option>
-                <option value="Bricklayer">Bricklayer</option>
-                <option value="Cabinet Maker">Cabinet Maker</option>
                 <option value="Carpenter">Carpenter</option>
                 <option value="Concrete Finisher">Concrete Finisher</option>
-                <option value="Concrete Pump Operator">Concrete Pump Operator</option>
-                <option value="Construction Manager">Construction Manager</option>
                 <option value="Construction Worker">Construction Worker</option>
-                <option value="Content Creator">Content Creator</option>
-                <option value="Copywriter">Copywriter</option>
-                <option value="Cutler">Cutler (Knife Maker)</option>
-                <option value="Data Entry Specialist">Data Entry Specialist</option>
-                <option value="Digital Marketer">Digital Marketer</option>
-                <option value="Drafter">Drafter</option>
                 <option value="Drywaller">Drywaller</option>
-                <option value="E-commerce Specialist">E-commerce Specialist</option>
                 <option value="Electrician">Electrician</option>
-                <option value="Elevator Mechanic">Elevator Mechanic</option>
-                <option value="Event Planner">Event Planner</option>
                 <option value="Farrier">Farrier</option>
-                <option value="Fashion Designer">Fashion Designer</option>
-                <option value="Financial Advisor">Financial Advisor</option>
-                <option value="Freelance Writer">Freelance Writer</option>
-                <option value="Framer">Framer (Framing Carpenter)</option>
-                <option value="Furniture Finisher">Furniture Finisher</option>
-                <option value="Glazier">Glazier</option>
-                <option value="Graphic Designer">Graphic Designer</option>
-                <option value="Grant Writer">Grant Writer</option>
-                <option value="Gunsmith">Gunsmith</option>
-                <option value="Handyman">Handyman</option>
-                <option value="Home Inspector">Home Inspector</option>
-                <option value="Housecleaner">Housecleaner</option>
-                <option value="HVAC Technician">HVAC Technician</option>
-                <option value="Illustrator">Illustrator</option>
-                <option value="Interior Designer">Interior Designer</option>
-                <option value="Ironworker">Ironworker</option>
-                <option value="Ironworker Structural">Ironworker (Structural)</option>
-                <option value="Landscape Designer">Landscape Designer</option>
+                <option value="HVAC Technicianr">HVAC Technician</option>
                 <option value="Landscaper">Landscaper</option>
-                <option value="Leatherworker">Leatherworker</option>
-                <option value="Legal Consultant">Legal Consultant</option>
-                <option value="Life Coach">Life Coach</option>
-                <option value="Locksmith">Locksmith</option>
-                <option value="Luthier">Luthier (Stringed Instrument Maker)</option>
-                <option value="Machinery Operator">Machinery Operator</option>
-                <option value="Makeup Artist">Makeup Artist</option>
                 <option value="Mason">Mason</option>
-                <option value="Masonry Contractor">Masonry Contractor</option>
-                <option value="Marketing Consultant">Marketing Consultant</option>
-                <option value="Metal Polisher">Metal Polisher</option>
-                <option value="Millwright">Millwright</option>
-                <option value="Paving Contractor">Paving Contractor</option>
                 <option value="Painter">Painter</option>
-                <option value="Personal Trainer">Personal Trainer</option>
-                <option value="Photographer">Photographer</option>
+                <option value="Paving Contractor">Paving Contractor</option>
                 <option value="Plasterer">Plasterer</option>
                 <option value="Plumber">Plumber</option>
                 <option value="Power Lineman">Power Lineman</option>
-                <option value="Paving Contractor">Paving Contractor</option>
-                <option value="Project Manager">Project Manager</option>
                 <option value="Roofing Contractor">Roofing Contractor</option>
                 <option value="Scaffolder">Scaffolder</option>
-                <option value="SEO Specialist">SEO Specialist</option>
-                <option value="Sheet Metal Worker">Sheet Metal Worker</option>
-                <option value="Silversmith">Silversmith</option>
-                <option value="Sign Maker">Sign Maker</option>
-                <option value="Social Media Influencer">Social Media Influencer</option>
-                <option value="Social Media Manager">Social Media Manager</option>
-                <option value="Software Developer">Software Developer</option>
                 <option value="Stonemason">Stonemason</option>
-                <option value="Surveyor">Surveyor</option>
                 <option value="Tiler">Tiler</option>
                 <option value="Tile Setter">Tile Setter</option>
-                <option value="Transcriptionist">Transcriptionist</option>
-                <option value="Translator">Translator</option>
-                <option value="Upholsterer">Upholsterer</option>
-                <option value="UX Designer">UX Designer</option>
-                <option value="Video Editor">Video Editor</option>
-                <option value="Videographer">Videographer</option>
-                <option value="Virtual Assistant">Virtual Assistant</option>
-                <option value="Voice Actor">Voice Actor</option>
-                <option value="Watchmaker">Watchmaker</option>
-                <option value="Web Developer">Web Developer</option>
                 <option value="Welder">Welder</option>
-                <option value="Welding Inspector">Welding Inspector</option>
             </select>
           </div>
           <div class="mb-3">
@@ -123,7 +47,7 @@
             <label for="price" class="form-label">Price</label>
             <div class="input-group">
                 <span class="input-group-text">$</span>
-                <input type="number" class="form-control" id="price" name="price" placeholder="0.00" step="10">
+                <input type="number" class="form-control" id="price" name="price" placeholder="0.00" step="1">
             </div>
           </div>
           <div class="mb-3">
@@ -214,102 +138,26 @@
             <label for="profession" class="form-label">What is your profession?</label>
             <select class="form-select" aria-label="Default select example" id="profession" name="profession">
               <option selected>Select Profession</option>
-              <option value="Accountant">Accountant</option>
-              <option value="Animator">Animator</option>
-              <option value="Aircraft Mechanic">Aircraft Mechanic</option>
-              <option value="App Developer">App Developer</option>
-              <option value="Architect">Architect</option>
-              <option value="Auto Body Technician">Auto Body Technician</option>
-              <option value="Auto Mechanic">Auto Mechanic</option>
-              <option value="Bicycle Mechanic">Bicycle Mechanic</option>
-              <option value="Bicycle Repair Technician">Bicycle Repair Technician</option>
-              <option value="Blacksmith">Blacksmith</option>
-              <option value="Boilermaker">Boilermaker</option>
-              <option value="Bookbinder">Bookbinder</option>
-              <option value="Bricklayer">Bricklayer</option>
-              <option value="Cabinet Maker">Cabinet Maker</option>
               <option value="Carpenter">Carpenter</option>
               <option value="Concrete Finisher">Concrete Finisher</option>
-              <option value="Concrete Pump Operator">Concrete Pump Operator</option>
-              <option value="Construction Manager">Construction Manager</option>
               <option value="Construction Worker">Construction Worker</option>
-              <option value="Content Creator">Content Creator</option>
-              <option value="Copywriter">Copywriter</option>
-              <option value="Cutler">Cutler (Knife Maker)</option>
-              <option value="Data Entry Specialist">Data Entry Specialist</option>
-              <option value="Digital Marketer">Digital Marketer</option>
-              <option value="Drafter">Drafter</option>
               <option value="Drywaller">Drywaller</option>
-              <option value="E-commerce Specialist">E-commerce Specialist</option>
               <option value="Electrician">Electrician</option>
-              <option value="Elevator Mechanic">Elevator Mechanic</option>
-              <option value="Event Planner">Event Planner</option>
               <option value="Farrier">Farrier</option>
-              <option value="Fashion Designer">Fashion Designer</option>
-              <option value="Financial Advisor">Financial Advisor</option>
-              <option value="Freelance Writer">Freelance Writer</option>
-              <option value="Framer">Framer (Framing Carpenter)</option>
-              <option value="Furniture Finisher">Furniture Finisher</option>
-              <option value="Glazier">Glazier</option>
-              <option value="Graphic Designer">Graphic Designer</option>
-              <option value="Grant Writer">Grant Writer</option>
-              <option value="Gunsmith">Gunsmith</option>
-              <option value="Handyman">Handyman</option>
-              <option value="Home Inspector">Home Inspector</option>
-              <option value="Housecleaner">Housecleaner</option>
-              <option value="HVAC Technician">HVAC Technician</option>
-              <option value="Illustrator">Illustrator</option>
-              <option value="Interior Designer">Interior Designer</option>
-              <option value="Ironworker">Ironworker</option>
-              <option value="Ironworker Structural">Ironworker (Structural)</option>
-              <option value="Landscape Designer">Landscape Designer</option>
+              <option value="HVAC Technicianr">HVAC Technician</option>
               <option value="Landscaper">Landscaper</option>
-              <option value="Leatherworker">Leatherworker</option>
-              <option value="Legal Consultant">Legal Consultant</option>
-              <option value="Life Coach">Life Coach</option>
-              <option value="Locksmith">Locksmith</option>
-              <option value="Luthier">Luthier (Stringed Instrument Maker)</option>
-              <option value="Machinery Operator">Machinery Operator</option>
-              <option value="Makeup Artist">Makeup Artist</option>
               <option value="Mason">Mason</option>
-              <option value="Masonry Contractor">Masonry Contractor</option>
-              <option value="Marketing Consultant">Marketing Consultant</option>
-              <option value="Metal Polisher">Metal Polisher</option>
-              <option value="Millwright">Millwright</option>
-              <option value="Paving Contractor">Paving Contractor</option>
               <option value="Painter">Painter</option>
-              <option value="Personal Trainer">Personal Trainer</option>
-              <option value="Photographer">Photographer</option>
+              <option value="Paving Contractor">Paving Contractor</option>
               <option value="Plasterer">Plasterer</option>
               <option value="Plumber">Plumber</option>
               <option value="Power Lineman">Power Lineman</option>
-              <option value="Paving Contractor">Paving Contractor</option>
-              <option value="Project Manager">Project Manager</option>
               <option value="Roofing Contractor">Roofing Contractor</option>
               <option value="Scaffolder">Scaffolder</option>
-              <option value="SEO Specialist">SEO Specialist</option>
-              <option value="Sheet Metal Worker">Sheet Metal Worker</option>
-              <option value="Silversmith">Silversmith</option>
-              <option value="Sign Maker">Sign Maker</option>
-              <option value="Social Media Influencer">Social Media Influencer</option>
-              <option value="Social Media Manager">Social Media Manager</option>
-              <option value="Software Developer">Software Developer</option>
               <option value="Stonemason">Stonemason</option>
-              <option value="Surveyor">Surveyor</option>
               <option value="Tiler">Tiler</option>
               <option value="Tile Setter">Tile Setter</option>
-              <option value="Transcriptionist">Transcriptionist</option>
-              <option value="Translator">Translator</option>
-              <option value="Upholsterer">Upholsterer</option>
-              <option value="UX Designer">UX Designer</option>
-              <option value="Video Editor">Video Editor</option>
-              <option value="Videographer">Videographer</option>
-              <option value="Virtual Assistant">Virtual Assistant</option>
-              <option value="Voice Actor">Voice Actor</option>
-              <option value="Watchmaker">Watchmaker</option>
-              <option value="Web Developer">Web Developer</option>
               <option value="Welder">Welder</option>
-              <option value="Welding Inspector">Welding Inspector</option>
             </select>
           </div>
           <div class="mb-3">

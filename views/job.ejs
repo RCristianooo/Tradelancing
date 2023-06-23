@@ -1,11 +1,29 @@
 <%- include('partials/logged-header') -%>
 <div class="container card-container">
     <div class="row">
-      <h1><%= post.title %></h1>
-      <p><%= post.description %></p>
-      <p>By: <%= user.userName %></p>
       <div class="col-md-6">
         <img src="<%= post.image%>" class="img-fluid" alt="Responsive image">
+      </div>
+      <div class="col-md-5">
+        <h1><%= post.title %></h1>
+        <h5>By: <%= user.userName %></h5>
+        <p>Price: $<%= post.price %></p>
+        <p>Location: <%= post.location %></p>
+        <div class="row row-cols-3">
+          <!-- <div class="col-md-3">
+            <span class="badge pill bg-primary">Profession:</span>
+            <p><%= post.profession %></p>
+          </div> -->
+          <div class="col-md-3">
+            <span class="badge pill bg-primary">Profession:</span>
+            <p><%= post.profession %></p>
+          </div>
+          <div class="col-md-3">
+            <span class="badge pill bg-primary">Payment:</span>
+            <p><%= post.payment %></p>
+          </div>
+        </div>
+        <p><%= post.description %></p>
         <div class="row row-cols-3">
           <form
             class="col justify-content-end"
@@ -15,9 +33,8 @@
           <button class="<%if(post.bookmarks.includes(user.id)){ %> bi bi-bookmark-fill<%} else { %> bi bi-bookmark <% }%>
             btn btn-primary" type="submit"></button>
           </form>
+          <button class="btn btn-primary">Contact &RightArrow;</button>
         </div>
-      </div>
-      <div class="col-md-6">
       </div>
     </div>
 </div>
