@@ -13,7 +13,7 @@ const ProSchema = new mongoose.Schema ({
         type: String,
         require: true,
     },
-     profession: {
+    profession: {
         type: String,
         required: true,
     },
