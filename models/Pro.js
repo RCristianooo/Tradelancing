@@ -48,8 +48,7 @@ const ProSchema = new mongoose.Schema ({
     },
     ratings: {
         type: Number,
-    }
-    
+    },
 })
 
 module.exports = mongoose.model("Pro", ProSchema);
