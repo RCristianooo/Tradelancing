@@ -2,17 +2,17 @@
 <div class="container card-container">
     <div class="row">
       <!-- <h1><%= pro.title %></h1>
-      <p><%= pro.description %></p>
-      <p>By: <%= user.userName %></p> -->
+      <p><%= pro.description %></p> -->
+      <p>By: <%= user.userName %></p>
       <div class="col-md-6">
-        <img src="<%= proImage.image%>" class="img-fluid" alt="Responsive image">
+        <img src="<%= pro.proImage%>" class="img-fluid" alt="Responsive image">
         <div class="row row-cols-3">
           <form
             class="col justify-content-end"
-            action="/professional/bookmarkPro/<%= post.id %>?_method=PUT"
+            action="/professional/bookmarkPro/<%= pro.id %>?_method=PUT"
             method="POST"
           >
-          <button class="<%if(post.bookmarks.includes(user.id)){ %> bi bi-bookmark-fill<%} else { %> bi bi-bookmark <% }%>
+          <button class="<%if(pro.bookmarks.includes(user.id)){ %> bi bi-bookmark-fill<%} else { %> bi bi-bookmark <% }%>
             btn btn-primary" type="submit"></button>
           </form>
         </div>

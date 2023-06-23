@@ -30,12 +30,15 @@ module.exports = {
         const result = await cloudinary.uploader.upload(req.file.path);
   
         await Pro.create({
+          firstName: req.user.firstName,
+          lastName: req.user.lastName,
+          email: req.user.email,
           profession: req.body.profession,
           location: req.body.location,
           phoneNumber: req.body.phoneNumber,
           yearsOfExp: req.body.yearsOfExp,
-          payment: req.body.payment,
-          image: result.secure_url,
+          paymentMethods: req.body.paymentMethods,
+          proImage: result.secure_url,
           cloudinaryId: result.public_id,
           user: req.user.id,
         });

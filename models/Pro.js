@@ -25,8 +25,12 @@ const ProSchema = new mongoose.Schema ({
         type: String,
         unique: true,
     },
+    bookmarks: {
+        type: Array,
+        required: true,
+    },
     phoneNumber: {
-        type: Number,
+        type: String,
         unique: true,
     },
     totalJobs: {
@@ -48,6 +52,10 @@ const ProSchema = new mongoose.Schema ({
     },
     ratings: {
         type: Number,
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
     },
 })
 
