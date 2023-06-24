@@ -39,6 +39,7 @@ module.exports = {
           yearsOfExp: req.body.yearsOfExp,
           paymentMethods: req.body.paymentMethods,
           proImage: result.secure_url,
+          description: req.body.proDescription,
           cloudinaryId: result.public_id,
           user: req.user.id,
         });

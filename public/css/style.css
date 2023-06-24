@@ -49,6 +49,21 @@ body {
     color: #193655;
 }
 
+.rounded-circle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 50%;
+    height: 50%;
+}
+
+.backrow{
+    background-color: #55A4FC;
+    border: 3px solid #193655;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
 /* .card-img-top {
     width: 100%;
     height: 20vw;

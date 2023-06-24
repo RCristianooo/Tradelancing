@@ -1,13 +1,16 @@
 <%- include('partials/logged-header') -%>
 <div class="container card-container">
-    <div class="row">
-      <!-- <h1><%= pro.title %></h1>
-      <p><%= pro.description %></p> -->
-      <p>By: <%= user.userName %></p>
-      <div class="col-md-6">
-        <img src="<%= pro.proImage%>" class="img-fluid" alt="Responsive image">
-        <div class="row row-cols-3">
-          <form
+    <div class="row backrow bg">
+      <div class="col-md-3">
+        <div class="col-12">
+          <img src="<%= pro.proImage%>" class="rounded-circle" alt="Responsive image">
+        </div>
+      </div>
+      <div class="col-md-4 p-4">
+        <h3><%= `${pro.firstName} ${pro.lastName}` %></h3>
+        <h5><%= pro.profession %></h5>
+        <h6>Located in: <%= pro.location %></h6>
+        <form
             class="col justify-content-end"
             action="/professional/bookmarkPro/<%= pro.id %>?_method=PUT"
             method="POST"
@@ -15,10 +18,20 @@
           <button class="<%if(pro.bookmarks.includes(user.id)){ %> bi bi-bookmark-fill<%} else { %> bi bi-bookmark <% }%>
             btn btn-primary" type="submit"></button>
           </form>
+      </div>
+      <!-- <div class="col-md-6"> -->
+      <div class="col-md-7 mx-auto p-4 col-lg-5">
+        <div class="row row-cols-4 gap-3">
+            <span class="badge pill bg-primary">Total Jobs: <%= pro.totalJobs %></span>
+            <span class="badge pill bg-primary">Jobs Completed: <%= pro.completedJobs %></span>
+            <span class="badge pill bg-primary">Jobs in Queue: <%= pro.queuedJobs %></span>
         </div>
       </div>
-      <div class="col-md-6">
-      </div>
-    </div>
 </div>
+<div class="col-md-7">
+  <h2 class="pt-4"><%= `About ${pro.firstName}` %></h2>
+  <p><%= pro.proDescription %></p>
+</div>
+<div></div>
+
 <%- include('partials/footer') -%>
