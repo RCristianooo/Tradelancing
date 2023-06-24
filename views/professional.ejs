@@ -28,10 +28,22 @@
         </div>
       </div>
 </div>
-<div class="col-md-7">
-  <h2 class="pt-4"><%= `About ${pro.firstName}` %></h2>
-  <p><%= pro.proDescription %></p>
+<div class="row">
+  <div class="col-md-8">
+    <h2 class="pt-4"><%= `About ${pro.firstName}` %></h2>
+    <p><%= pro.proDescription %></p>
+  </div>
+  <div class="col-md-3 pt-4 siderow">
+    <h6>Years of Experience: <%= pro.yearsOfExp %></h6>
+    <br>
+    <h6>Accepts: <%= pro.paymentMethods %></h6>
+    <br>
+    <h6>Email: <%= pro.email %></h6>
+    <br>
+    <h6>Phone Number: <%= pro.phoneNumber %></h6>
+    <br>
+    <button class="btn btn-primary col-lg-12">Contact &RightArrow;</button>
+  </div>
 </div>
-<div></div>
 
 <%- include('partials/footer') -%>
