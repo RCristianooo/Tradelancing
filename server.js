@@ -19,7 +19,7 @@ require("dotenv").config({ path: "./config/.env" });
 require("./config/passport")(passport);
 
 //Connect To Database
-connectDB();
+// connectDB();
 
 //Using EJS for views
 app.set("view engine", "ejs");
@@ -43,7 +43,9 @@ app.use(
     secret: "keyboard cat",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ client: mongoose.connection }),
+    store: MongoStore.create({ 
+      mongoUrl: process.env.MONGO_URI, 
+    }),
   })
 );
 
@@ -60,6 +62,8 @@ app.use("/job", postRoutes);
 app.use("/professional", proRoutes);
 
 //Server Running
-app.listen(process.env.PORT, () => {
+connectDB().then(() => {
+  app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}, you better catch it!`);
-});
+  });
+})
