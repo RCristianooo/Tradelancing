@@ -10,7 +10,6 @@ email: tester1234@gmail.com <br>
 password: tester1234
 
 ![image](https://github.com/RCristianooo/Tradelancing/assets/114029162/c9f55314-31f3-4bc0-a261-48b4cfdf245c)
-)
 
 
 ## How It's Made:
