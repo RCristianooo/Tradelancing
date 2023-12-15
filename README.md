@@ -19,7 +19,13 @@ password: tester1234
 
 
 ## Optimizations
-
+- Intertwined Tradelancing and Taskwrench together
+- Built-In Calendar & Schedule
+- List of Clients a User has
+- Map of available jobs
+- Search Filter for Jobs & Professionals
+- Messaging System
+- Customer Review System
 
 ## Lessons Learned:
 
