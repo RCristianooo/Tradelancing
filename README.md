@@ -4,7 +4,7 @@
   Crafting Freedom, One Gig at a Time
 </h1>
 
-**Link to project:** [Tradelancing](https://tradelancing.up.railway.app) <br>
+**Link to project:** [Tradelancing](https://tradelancing.cyclic.app) <br>
 **Demo User** <br>
 email: tester1234@gmail.com <br>
 password: tester1234
