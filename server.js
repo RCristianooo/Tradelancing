@@ -61,6 +61,11 @@ app.use("/", mainRoutes);
 app.use("/job", postRoutes);
 app.use("/professional", proRoutes);
 
+//Health Check Endpoint
+app.get("/health", (req, res) => { 
+  res.status(200).send("OK");
+});
+
 //Server Running
 connectDB().then(() => {
   app.listen(process.env.PORT, () => {
