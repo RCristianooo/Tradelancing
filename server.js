@@ -67,8 +67,10 @@ app.get("/health", (req, res) => {
 });
 
 //Server Running
+const PORT = process.env.PORT || 3520;
+
 connectDB().then(() => {
-  app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}, you better catch it!`);
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}, you better catch it!`);
   });
 })
